@@ -667,6 +667,7 @@ int uniden_get_channel(RIG *rig, channel_t *chan, int read_only)
         }
 
         /*  TA C 001 My Alpha Tag */
+	membuf[mem_len-1] = '\0';
         strncpy(chan->channel_desc, membuf + 9, rig->caps->chan_desc_sz);
     }
 
